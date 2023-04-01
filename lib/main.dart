@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget page;
     switch (selectedPage) {
       case 'Hello':
-        page = const HelloPage();
+        page = HelloPage();
         break;
       case 'Template':
         page = const TemplatePage();
