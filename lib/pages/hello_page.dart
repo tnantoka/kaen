@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
-import 'package:kaen/games/hello/hello_game.dart';
+import 'package:kaen/games/hello_game.dart';
 
 class HelloPage extends StatelessWidget {
   HelloPage({super.key});

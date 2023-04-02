@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
-import 'package:kaen/games/button/button_game.dart';
+import 'package:kaen/games/button_game.dart';
 
 class ButtonPage extends StatelessWidget {
   ButtonPage({super.key});
