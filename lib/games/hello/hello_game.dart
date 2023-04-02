@@ -3,21 +3,17 @@ import 'dart:async';
 import 'package:flame/components.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
-import 'package:flame/game.dart';
 import 'package:flutter/services.dart';
+import 'package:kaen/games/base_game.dart';
 
-class HelloGame extends FlameGame with KeyboardEvents {
+class HelloGame extends BaseGame with KeyboardEvents {
   Player player = Player(x: 0.0, y: 0.0);
 
   @override
   Future<void> onLoad() async {
-    await add(
-      FpsTextComponent(
-        position: Vector2(size.x - 8, size.y - 8),
-        anchor: Anchor.bottomRight,
-        textRenderer: TextPaint(style: const TextStyle(fontSize: 16)),
-      ),
-    );
+    grid = false;
+
+    super.onLoad();
 
     player = Player(x: size.x * 0.5, y: size.y * 0.5);
     await add(player);
@@ -40,8 +36,13 @@ class HelloGame extends FlameGame with KeyboardEvents {
   }
 }
 
-class Player extends PositionComponent {
-  Player({required x, required y}) : super(position: Vector2(x, y));
+class Player extends RectangleComponent {
+  Player({required x, required y})
+      : super(
+          position: Vector2(x, y),
+          size: Vector2(40, 40),
+          paint: Paint()..color = Colors.white,
+        );
 
   final speed = 200;
   var vx = 0;
@@ -51,15 +52,5 @@ class Player extends PositionComponent {
     super.update(dt);
 
     x += vx * speed * dt;
-  }
-
-  @override
-  void render(Canvas canvas) {
-    super.render(canvas);
-
-    canvas.drawRect(
-      const Rect.fromLTWH(0, 0, 40, 40),
-      Paint()..color = Colors.white,
-    );
   }
 }

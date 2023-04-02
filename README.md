@@ -5,6 +5,8 @@ A new Flutter project.
 ## Development
 
 ```
+$ flutter analyze
+
 $ flutter run -d chrome
 ```
 

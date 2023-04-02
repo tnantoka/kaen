@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kaen/pages/button_page.dart';
 
 import 'package:kaen/pages/home_page.dart';
 import 'package:kaen/pages/hello_page.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: Map.fromEntries(
-        ['', 'hello'].map(
+        ['', 'hello', 'button'].map(
           (route) => MapEntry('/$route', (context) => MyHomePage(route: route)),
         ),
       ),
@@ -48,6 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
       case 'hello':
         page = HelloPage();
         break;
+      case 'button':
+        page = ButtonPage();
+        break;
       default:
         throw UnimplementedError('no widget for $this.route');
     }
@@ -61,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              for (final page in ['', 'hello'])
+              for (final page in ['', 'hello', 'button'])
                 ListTile(
                   title: Text(page == '' ? 'home' : page),
                   onTap: () {
