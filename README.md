@@ -1,6 +1,6 @@
 # kaen
 
-A new Flutter project.
+Examples built with [Flame](https://flame-engine.org/) game engine.
 
 ## Development
 
