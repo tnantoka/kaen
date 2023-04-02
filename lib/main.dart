@@ -8,6 +8,12 @@ void main() {
   runApp(const MyApp());
 }
 
+const pages = [
+  ['', ''],
+  ['hello', 'Rectangle, Keyboard'],
+  ['button', 'Button, Overlays'],
+];
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -21,8 +27,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: Map.fromEntries(
-        ['', 'hello', 'button'].map(
-          (route) => MapEntry('/$route', (context) => MyHomePage(route: route)),
+        pages.map(
+          (page) => MapEntry(
+            '/${page[0]}',
+            (context) => MyHomePage(route: page[0]),
+          ),
         ),
       ),
     );
@@ -65,11 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              for (final page in [
-                ['', ''],
-                ['hello', 'Rectangle, Keyboard'],
-                ['button', 'Button, Overlays'],
-              ])
+              for (final page in pages)
                 ListTile(
                   title: Text(page[0] == '' ? 'home' : page[0]),
                   subtitle: Text(page[1]),
