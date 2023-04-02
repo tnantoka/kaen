@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:kaen/pages/home_page.dart';
 import 'package:kaen/pages/hello_page.dart';
-import 'package:kaen/pages/template_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,53 +18,56 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
       ),
-      home: const MyHomePage(),
+      initialRoute: '/',
+      routes: Map.fromEntries(
+        ['', 'hello'].map(
+          (route) => MapEntry('/$route', (context) => MyHomePage(route: route)),
+        ),
+      ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({required this.route, super.key});
+
+  final String route;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var selectedPage = 'Hello';
-
   @override
   Widget build(BuildContext context) {
     Widget page;
-    switch (selectedPage) {
-      case 'Hello':
+    switch (widget.route) {
+      case '':
+        page = const HomePage();
+        break;
+      case 'hello':
         page = HelloPage();
         break;
-      case 'Template':
-        page = const TemplatePage();
-        break;
       default:
-        throw UnimplementedError('no widget for $selectedPage');
+        throw UnimplementedError('no widget for $this.route');
     }
 
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         appBar: AppBar(
-          title: Text(selectedPage),
+          title: Text(widget.route),
         ),
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              for (final page in ['Hello', 'Template'])
+              for (final page in ['', 'hello'])
                 ListTile(
-                  title: Text(page),
+                  title: Text(page == '' ? 'home' : page),
                   onTap: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      selectedPage = page;
-                    });
+                    Navigator.pushNamed(context, '/$page');
                   },
+                  selected: page == widget.route,
                 ),
             ],
           ),
