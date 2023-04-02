@@ -65,13 +65,18 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              for (final page in ['', 'hello', 'button'])
+              for (final page in [
+                ['', ''],
+                ['hello', 'Rectangle, Keyboard'],
+                ['button', 'Button, Overlays'],
+              ])
                 ListTile(
-                  title: Text(page == '' ? 'home' : page),
+                  title: Text(page[0] == '' ? 'home' : page[0]),
+                  subtitle: Text(page[1]),
                   onTap: () {
-                    Navigator.pushNamed(context, '/$page');
+                    Navigator.pushNamed(context, '/${page[0]}');
                   },
-                  selected: page == widget.route,
+                  selected: page[0] == widget.route,
                 ),
             ],
           ),
