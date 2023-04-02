@@ -1,4 +1,4 @@
-# kaen
+# Kaen
 
 Examples built with [Flame](https://flame-engine.org/) game engine.
 
