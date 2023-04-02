@@ -16,6 +16,10 @@ $ flutter run -d chrome
 $ flutter pub run peanut
 ```
 
+## Acknowledgements
+
+- https://fonts.google.com/specimen/DotGothic16
+
 ## License
 
 MIT

@@ -23,7 +23,12 @@ class BaseGame extends FlameGame {
       FpsTextComponent(
         position: Vector2(size.x - 8, size.y - 8),
         anchor: Anchor.bottomRight,
-        textRenderer: TextPaint(style: const TextStyle(fontSize: 16)),
+        textRenderer: TextPaint(
+          style: const TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }

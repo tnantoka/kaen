@@ -22,3 +22,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: DotGothic16
+      fonts:
+        - asset: fonts/DotGothic16-Regular.ttf

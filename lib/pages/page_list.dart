@@ -7,7 +7,8 @@ class PageList extends StatelessWidget {
     ['', ''],
     ['hello', 'Rectangle, Keyboard'],
     ['button', 'Button, Overlays'],
-    ['physics', 'Forge2D']
+    ['physics', 'Forge2D'],
+    ['font', 'Google Fonts'],
   ];
 
   final String selected;
