@@ -27,3 +27,6 @@ flutter:
     - family: DotGothic16
       fonts:
         - asset: fonts/DotGothic16-Regular.ttf
+
+  assets:
+    - assets/images/

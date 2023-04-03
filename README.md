@@ -19,6 +19,7 @@ $ flutter pub run peanut
 ## Acknowledgements
 
 - https://fonts.google.com/specimen/DotGothic16
+- https://opengameart.org/content/fireflame
 
 ## License
 
