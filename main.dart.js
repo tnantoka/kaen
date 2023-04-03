@@ -68673,7 +68673,7 @@ return new A.mv(new A.rz(q,p,new A.MK(s,s,1/0,56),s),A.t9(s,this.a.a,B.yU,s,s,s,
 $S:395}
 A.aaW.prototype={
 $0(){var s=this.a.a.c
-A.ahj(A.IH("https://github.com/tnantoka/kaen/blob/main/lib/games/"+(s===""?"home":s)+"_game.dart",0,null))
+A.ahj(A.IH("https://github.com/tnantoka/kaen/blob/main/lib/"+(s===""?"pages/home_page":"games/"+s+"_game")+".dart",0,null))
 return null},
 $S:0}
 A.AV.prototype={
