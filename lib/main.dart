@@ -6,6 +6,7 @@ import 'package:kaen/pages/home_page.dart';
 import 'package:kaen/pages/hello_page.dart';
 import 'package:kaen/pages/physics_page.dart';
 import 'package:kaen/pages/page_list.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,6 +76,13 @@ class _MyHomePageState extends State<MyHomePage> {
       return Scaffold(
         appBar: AppBar(
           title: Text(widget.route),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.code),
+              tooltip: 'GitHub',
+              onPressed: () => launchGitHub(),
+            ),
+          ],
         ),
         drawer: Drawer(
           child: PageList(selected: widget.route),
@@ -85,5 +93,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       );
     });
+  }
+
+  launchGitHub() {
+    final path =
+        widget.route == '' ? 'pages/home_page' : 'games/${widget.route}_game';
+    final url = 'https://github.com/tnantoka/kaen/blob/main/lib/$path.dart';
+    launchUrl(Uri.parse(url));
   }
 }
