@@ -1,12 +1,11 @@
 import 'dart:async';
 
 import 'package:flame/components.dart';
-import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:kaen/games/base_game.dart';
 import 'package:flutter/material.dart';
 
-class FontGame extends BaseGame with HasTappables {
+class FontGame extends BaseGame {
   FontGame({required this.onNext});
 
   VoidCallback onNext;
@@ -51,7 +50,7 @@ class FontGame extends BaseGame with HasTappables {
   }
 }
 
-class FontGame2 extends BaseGame with HasTappables {
+class FontGame2 extends BaseGame {
   FontGame2({required this.onBack});
 
   VoidCallback onBack;

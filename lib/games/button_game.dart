@@ -1,12 +1,11 @@
 import 'dart:async';
 
 import 'package:flame/components.dart';
-import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:kaen/games/base_game.dart';
 
-class ButtonGame extends BaseGame with HasTappables {
+class ButtonGame extends BaseGame {
   var result = TextComponent();
   var status = '';
 

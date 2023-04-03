@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flame: ^1.6.0
+  flame: ^1.7.0
   flame_forge2d: ^0.12.5
 
 dev_dependencies:
