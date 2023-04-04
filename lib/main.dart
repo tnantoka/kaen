@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaen/pages/animation_page.dart';
 import 'package:kaen/pages/button_page.dart';
+import 'package:kaen/pages/collision_page.dart';
 import 'package:kaen/pages/font_page.dart';
 import 'package:kaen/pages/home_page.dart';
 import 'package:kaen/pages/hello_page.dart';
@@ -67,6 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
       case 'animation':
         page = AnimationPage();
+        break;
+      case 'collision':
+        page = CollisionPage();
         break;
       default:
         throw UnimplementedError('no widget for $this.route');

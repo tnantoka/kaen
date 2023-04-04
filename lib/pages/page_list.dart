@@ -10,6 +10,7 @@ class PageList extends StatelessWidget {
     ['physics', 'Forge2D, TapDetector'],
     ['font', 'Google Fonts, Screens'],
     ['animation', 'SpriteAnimationComponent'],
+    ['collision', 'HasCollisionDetection'],
   ];
 
   final String selected;
