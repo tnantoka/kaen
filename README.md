@@ -20,6 +20,7 @@ $ flutter pub run peanut
 
 - https://fonts.google.com/specimen/DotGothic16
 - https://opengameart.org/content/fireflame
+- https://ansimuz.itch.io/spaceship-shooter-environment
 
 ## License
 

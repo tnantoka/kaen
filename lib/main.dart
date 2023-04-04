@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaen/pages/animation_page.dart';
+import 'package:kaen/pages/audio_page.dart';
 import 'package:kaen/pages/button_page.dart';
 import 'package:kaen/pages/collision_page.dart';
 import 'package:kaen/pages/font_page.dart';
@@ -49,33 +50,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    Widget page;
-    switch (widget.route) {
-      case '':
-        page = const HomePage();
-        break;
-      case 'hello':
-        page = HelloPage();
-        break;
-      case 'button':
-        page = ButtonPage();
-        break;
-      case 'physics':
-        page = PhysicsPage();
-        break;
-      case 'font':
-        page = const FontPage();
-        break;
-      case 'animation':
-        page = AnimationPage();
-        break;
-      case 'collision':
-        page = CollisionPage();
-        break;
-      default:
-        throw UnimplementedError('no widget for $this.route');
-    }
-
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         appBar: AppBar(
@@ -93,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Container(
           color: Colors.blueGrey.shade50,
-          child: page,
+          child: page(widget.route),
         ),
       );
     });
@@ -104,5 +78,28 @@ class _MyHomePageState extends State<MyHomePage> {
         widget.route == '' ? 'pages/home_page' : 'games/${widget.route}_game';
     final url = 'https://github.com/tnantoka/kaen/blob/main/lib/$path.dart';
     launchUrl(Uri.parse(url));
+  }
+
+  Widget page(route) {
+    switch (route) {
+      case '':
+        return const HomePage();
+      case 'hello':
+        return HelloPage();
+      case 'button':
+        return ButtonPage();
+      case 'physics':
+        return PhysicsPage();
+      case 'font':
+        return const FontPage();
+      case 'animation':
+        return AnimationPage();
+      case 'collision':
+        return CollisionPage();
+      case 'audio':
+        return AudioPage();
+      default:
+        throw UnimplementedError('no widget for $route');
+    }
   }
 }

@@ -10,7 +10,8 @@ class PageList extends StatelessWidget {
     ['physics', 'Forge2D, TapDetector'],
     ['font', 'Google Fonts, Screens'],
     ['animation', 'SpriteAnimationComponent'],
-    ['collision', 'HasCollisionDetection'],
+    ['collision', 'HasCollisionDetection, CollisionCallbacks'],
+    ['audio', 'FlameAudio'],
   ];
 
   final String selected;
@@ -24,7 +25,7 @@ class PageList extends StatelessWidget {
             title: Text(page[0] == '' ? 'home' : page[0]),
             subtitle: Text(page[1]),
             onTap: () {
-              Navigator.pushNamed(context, '/${page[0]}');
+              Navigator.pushReplacementNamed(context, '/${page[0]}');
             },
             selected: page[0] == selected,
           ),
