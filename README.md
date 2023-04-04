@@ -13,8 +13,10 @@ $ flutter run -d chrome
 ## Deploy
 
 ```
-$ flutter pub run peanut
+$ flutter pub run peanut --no-release
 ```
+
+`--no-release` is a quick-fix to avoid the `MissingPluginException` error when using FlameAudio (audioplayers_web).
 
 ## Acknowledgements
 
