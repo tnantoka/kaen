@@ -12,6 +12,10 @@ class PageList extends StatelessWidget {
     ['animation', 'SpriteAnimationComponent'],
     ['collision', 'HasCollisionDetection, CollisionCallbacks'],
     ['audio', 'FlameAudio'],
+    [
+      'particle',
+      'ParticleSystemComponent, AcceleratedParticle, CircleParticle'
+    ],
   ];
 
   final String selected;

@@ -7,6 +7,7 @@ import 'package:kaen/pages/font_page.dart';
 import 'package:kaen/pages/home_page.dart';
 import 'package:kaen/pages/hello_page.dart';
 import 'package:kaen/pages/physics_page.dart';
+import 'package:kaen/pages/particle_page.dart';
 import 'package:kaen/pages/page_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -98,6 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
         return CollisionPage();
       case 'audio':
         return AudioPage();
+      case 'particle':
+        return ParticlePage();
       default:
         throw UnimplementedError('no widget for $route');
     }
