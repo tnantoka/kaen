@@ -7,12 +7,13 @@ class PageList extends StatelessWidget {
     ['', ''],
     ['hello', 'Rectangle, Keyboard'],
     ['button', 'Button, Overlays'],
-    ['physics', 'Forge2D, TapDetector'],
+    ['physics', 'flame_forge2d, TapDetector'],
     ['font', 'Google Fonts, Screens'],
     ['animation', 'SpriteAnimationComponent'],
     ['collision', 'HasCollisionDetection, CollisionCallbacks'],
-    ['audio', 'FlameAudio'],
+    ['audio', 'flame_audio'],
     ['particle', 'ParticleSystemComponent, AcceleratedParticle, ImageParticle'],
+    ['admob', 'google_mobile_ads'],
   ];
 
   final String selected;

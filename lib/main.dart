@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kaen/pages/animation_page.dart';
 import 'package:kaen/pages/audio_page.dart';
@@ -8,10 +11,17 @@ import 'package:kaen/pages/home_page.dart';
 import 'package:kaen/pages/hello_page.dart';
 import 'package:kaen/pages/physics_page.dart';
 import 'package:kaen/pages/particle_page.dart';
+import 'package:kaen/pages/admob_page.dart';
 import 'package:kaen/pages/page_list.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  if (!kIsWeb && Platform.isIOS) {
+    MobileAds.instance.initialize();
+  }
+
   runApp(const MyApp());
 }
 
@@ -101,6 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
         return AudioPage();
       case 'particle':
         return ParticlePage();
+      case 'admob':
+        return AdmobPage();
       default:
         throw UnimplementedError('no widget for $route');
     }
