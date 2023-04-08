@@ -14,6 +14,7 @@ class PageList extends StatelessWidget {
     ['audio', 'flame_audio'],
     ['particle', 'ParticleSystemComponent, AcceleratedParticle, ImageParticle'],
     ['admob', 'google_mobile_ads'],
+    ['acknowledgements', 'showAboutDialog, LicenseRegistry'],
   ];
 
   final String selected;

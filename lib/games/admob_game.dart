@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:flame/components.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:kaen/games/base_game.dart';
 
