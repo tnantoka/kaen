@@ -48,19 +48,36 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SimpleDialog(
-      title: const Text('Menu'),
-      children: ['OK', 'Cancel']
-          .map(
-            (status) => SimpleDialogOption(
-              child: Text(status),
-              onPressed: () {
-                game.status = status;
-                game.overlays.remove('menu');
-              },
-            ),
-          )
-          .toList(),
+    return Scaffold(
+      backgroundColor: Colors.white.withAlpha(100),
+      body: SimpleDialog(
+        title: const Text('Menu'),
+        children: ['OK', 'Cancel']
+            .map(
+              (status) => SimpleDialogOption(
+                child: Text(status),
+                onPressed: () {
+                  game.status = status;
+                  game.overlays.remove('menu');
+                },
+              ),
+            )
+            .toList(),
+      ),
     );
+    // return SimpleDialog(
+    //   title: const Text('Menu'),
+    //   children: ['OK', 'Cancel']
+    //       .map(
+    //         (status) => SimpleDialogOption(
+    //           child: Text(status),
+    //           onPressed: () {
+    //             game.status = status;
+    //             game.overlays.remove('menu');
+    //           },
+    //         ),
+    //       )
+    //       .toList(),
+    // );
   }
 }
