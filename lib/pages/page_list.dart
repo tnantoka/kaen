@@ -15,6 +15,7 @@ class PageList extends StatelessWidget {
     ['particle', 'ParticleSystemComponent, AcceleratedParticle, ImageParticle'],
     ['admob', 'google_mobile_ads'],
     ['acknowledgements', 'showAboutDialog, LicenseRegistry'],
+    ['parallax', 'ParallaxComponent'],
   ];
 
   final String selected;

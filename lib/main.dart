@@ -13,6 +13,7 @@ import 'package:kaen/pages/physics_page.dart';
 import 'package:kaen/pages/particle_page.dart';
 import 'package:kaen/pages/admob_page.dart';
 import 'package:kaen/pages/acknowledgements_page.dart';
+import 'package:kaen/pages/parallax_page.dart';
 import 'package:kaen/pages/page_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -116,6 +117,8 @@ class _MyHomePageState extends State<MyHomePage> {
         return AdmobPage();
       case 'acknowledgements':
         return AcknowledgementsPage();
+      case 'parallax':
+        return ParallaxPage();
       default:
         throw UnimplementedError('no widget for $route');
     }
