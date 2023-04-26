@@ -65,19 +65,5 @@ class Menu extends StatelessWidget {
             .toList(),
       ),
     );
-    // return SimpleDialog(
-    //   title: const Text('Menu'),
-    //   children: ['OK', 'Cancel']
-    //       .map(
-    //         (status) => SimpleDialogOption(
-    //           child: Text(status),
-    //           onPressed: () {
-    //             game.status = status;
-    //             game.overlays.remove('menu');
-    //           },
-    //         ),
-    //       )
-    //       .toList(),
-    // );
   }
 }
